@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/output.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="content-holder">
+        <form action="/login" class="login-form">
+            <div class="form-label">
+                <label for="email">Email: </label>
+                <input type="text" name="email" id="email_id">
+            </div>
+            <div class="form-label">
+                <label for="password">Password: </label>
+                <input type="password" name="password" id="password_id">
+            </div>
+            <div class="form-label">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+</div>
+    <form action="/register">
+        <div class="form-label">
+            <label for="first_name">First Name: </label>
+            <input type="text" name="first_name" id="first_name_id">
+        </div>
+        <div class="form-label">
+            <label for="last_name">Last Name: </label>
+            <input type="text" name="last_name" id="last_name_id">
+        </div>
+        <div class="form-label">
+            <label for="email">Email: </label>
+            <input type="text" name="email" id="email_id">
+        </div>
+        <div class="form-label">
+            <label for="password"></label>
+            <input type="password" name="password" id="password_id">
+        </div>
+    </form>
+</body>
+</html>

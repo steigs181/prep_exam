@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/output.css') }}">
+    <title>{{ item.name }}</title>
+</head>
+<body>
+    <div>
+        <div>
+            <h3>Name: {{ item.name }} </h3>
+            <img src="{{ item.img_url }}" alt="missing picture">
+            <p class="">Description: {{ item.description }}</p>
+            <p class="text-green-500">Price: {{ item.price }} </p>
+            <p>Description: </p>
+        </div>
+    </div>
+</body>
+</html>

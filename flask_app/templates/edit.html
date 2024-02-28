@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form action="/" class="">
+            <h2>Edit Item</h2>
+            <input type="hidden" name="id", value="{{ item.id }}">
+            <div class="form-label">
+                <label for="email">Name: </label>
+                <input type="text" name="email" id="email_id">
+            </div>
+            <div class="form-label">
+                <label for="">Description: </label>
+                <input type="text" name="password" id="password_id">
+            </div>
+            <div>
+                <label for="">Image Url:</label>
+                <input type="text" name="" id="">
+            </div>
+            <div class="form-label">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

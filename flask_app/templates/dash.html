@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/output.css') }}">
+    <title>Document</title>
+</head>
+<body> 
+    <div>
+        <table class="table-auto">
+            <thead>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>IMAGE</th>
+                <th>PRICE</th>
+                <th>OWNER</th>
+                <th>ACTIONS</th>
+            </thead>
+            <tbody>
+                {% for item in items: %}
+                <tr>
+                    <td>{{ item.id }}</td>
+                    <td>{{ item.name }}</td>
+                    <td><img src="{{ item.url }}" alt=""></td>
+                    <td>{{ item.price }}</td>
+                    <td class="flex flex-row gap-2">
+                        <a class="text-blue-300" href="/items/{{item.id}}/view">View</a>
+                    </td>
+                    <td>
+                        <a class="text-blue-300" href="/items/{{item.id}}/edit">Edit</a>
+                    </td>
+                    <td>
+                        <a class="text-blue-300" href="/items/{{item.id}}/delete">Delete</a>
+                    </td>
+                </tr>
+                {%  %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
